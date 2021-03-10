@@ -37,20 +37,27 @@ namespace TM_EmployeeManagement.Models
             }
             return null;
         }
-        public Employee UpdateEmployee(Employee employee)
+        public Employee UpdateEmployee(EmployeeDepartmentModel employee)
         {
-            db.Entry(employee).State = EntityState.Modified;
+            Employee modifyEmployee = db.Employees.FirstOrDefault(emp => emp.EmployeeId == employee.EmployeeId);
+            modifyEmployee.FirstName = employee.FirstName;
+            modifyEmployee.LastName = employee.LastName;
+            modifyEmployee.EmailId = employee.Email;
+            modifyEmployee.DepartmentId = db.Departments.FirstOrDefault(d => d.DepartmentName == employee.Department).DepartmentId;
+            modifyEmployee.ManagerId = db.Employees.FirstOrDefault(e => e.FirstName == employee.Manager).EmployeeId;
+
+            db.Entry(modifyEmployee).State = EntityState.Modified;
             db.SaveChanges();
-            return employee;
+            return modifyEmployee;
         }
-        public Employee DeleteEmployee(int id)
+        public Employee DeleteEmployee(int? id)
         {
             var employee = db.Employees.FirstOrDefault(x => x.EmployeeId == id);
             db.Entry(employee).State = EntityState.Deleted;
             db.SaveChanges();
             return employee;
         }
-        public object GetEmployeeByFilter(int id, string department, string firstName, string lastName)
+        public object GetEmployeeByFilter(int? id, string department, string firstName, string lastName)
         {
             var employees = PerformJoin();
             if(id > 0)

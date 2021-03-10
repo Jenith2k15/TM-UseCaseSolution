@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Jenith\\source\\repos\\Jenith\\TM-EmployeeManagement\\TM-EmployeeManagement\\TM-EmployeeManagement.csproj": {}
+    "F:\\Jenith\\TM-UseCaseSolution\\TM-EmployeeManagement\\TM-EmployeeManagement\\TM-EmployeeManagement.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Jenith\\source\\repos\\Jenith\\TM-EmployeeManagement\\TM-EmployeeManagement\\TM-EmployeeManagement.csproj": {
+    "F:\\Jenith\\TM-UseCaseSolution\\TM-EmployeeManagement\\TM-EmployeeManagement\\TM-EmployeeManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Jenith\\source\\repos\\Jenith\\TM-EmployeeManagement\\TM-EmployeeManagement\\TM-EmployeeManagement.csproj",
+        "projectUniqueName": "F:\\Jenith\\TM-UseCaseSolution\\TM-EmployeeManagement\\TM-EmployeeManagement\\TM-EmployeeManagement.csproj",
         "projectName": "TM-EmployeeManagement",
-        "projectPath": "C:\\Users\\Jenith\\source\\repos\\Jenith\\TM-EmployeeManagement\\TM-EmployeeManagement\\TM-EmployeeManagement.csproj",
+        "projectPath": "F:\\Jenith\\TM-UseCaseSolution\\TM-EmployeeManagement\\TM-EmployeeManagement\\TM-EmployeeManagement.csproj",
         "packagesPath": "C:\\Users\\Jenith\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Jenith\\source\\repos\\Jenith\\TM-EmployeeManagement\\TM-EmployeeManagement\\obj\\",
+        "outputPath": "F:\\Jenith\\TM-UseCaseSolution\\TM-EmployeeManagement\\TM-EmployeeManagement\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -56,6 +56,10 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[3.1.5, )"
+            },
+            "NLog.Web.AspNetCore": {
+              "target": "Package",
+              "version": "[4.11.0, )"
             }
           },
           "imports": [
