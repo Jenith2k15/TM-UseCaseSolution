@@ -33,9 +33,9 @@ namespace TM_EmployeeManagement.Controllers
         [HttpGet]
         [Route("[action]")]
         [Route("api/Employees/Filter")]
-        public object Filter(int? id,string department,string firstName,string lastName)
+        public object Filter(int? id, string department, string firstName, string lastName)
         {
-            return employeeRepository.GetEmployeeByFilter(id,department,firstName,lastName);
+            return employeeRepository.GetEmployeeByFilter(id, department, firstName, lastName);
         }
 
         // POST: api/Employees/GetEmployeeById
@@ -46,13 +46,13 @@ namespace TM_EmployeeManagement.Controllers
         {
             try
             {
-                if(employee == null)
+                if (employee == null)
                     return BadRequest();
                 if (ModelState.IsValid)
                 {
                     var createdEmployee = employeeRepository.AddEmployee(employee);
                 }
-                 
+
                 return StatusCode(StatusCodes.Status201Created, "Employee created successfully");
             }
 
@@ -61,20 +61,20 @@ namespace TM_EmployeeManagement.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError,
                 "Error creating new employee record");
             }
-            
+
         }
 
         // POST: api/Employees/GetEmployeeById
         [HttpPut("{id:int}")]
         [Route("[action]")]
         [Route("api/Employees/ModifyEmployee")]
-        public object ModifyEmployee(int? id,EmployeeDepartmentModel employee)
+        public object ModifyEmployee(int? id, EmployeeDepartmentModel employee)
         {
             try
             {
-                if (id == 0 && employee.EmployeeId == 0 || id==null)
+                if (id == 0 && employee.EmployeeId == 0 || id == null)
                     return BadRequest("Employee ID mismatch");
-                
+
                 if (ModelState.IsValid)
                 {
                     var employeeToUpdate = employeeRepository.UpdateEmployee(employee);
@@ -101,7 +101,7 @@ namespace TM_EmployeeManagement.Controllers
         {
             try
             {
-                if (id == 0 || id==null)
+                if (id == 0 || id == null)
                 {
                     return NotFound($"Employee with Id = {id} not found");
                 }
@@ -115,6 +115,29 @@ namespace TM_EmployeeManagement.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError,
                 "Error deleting data");
             }
+        }
+
+        // POST: api/Employees/GetEmployeeById
+        [HttpGet]
+        [Route("[action]")]
+        [Route("api/Employees/GetEmployeeStatus")]
+        public object GetEmployeeStatusById(int? id)
+        {
+            try
+            {
+                if (id == 0 || id == null)
+                {
+                    return employeeRepository.GetEmployeeStatusById(id);
+                }
+                return StatusCode(StatusCodes.Status400BadRequest, "No employeeId supplied to get employee status");
+            }
+
+            catch (Exception)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError,
+                "Something went wrong when getting status of employee. Kindly try later");
+            }
+            
         }
     }
 }

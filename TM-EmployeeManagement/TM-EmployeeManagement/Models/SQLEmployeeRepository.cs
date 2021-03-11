@@ -9,10 +9,12 @@ namespace TM_EmployeeManagement.Models
     public class SQLEmployeeRepository : IEmployeeRepository
     {
         private readonly EmployeeManagementContext db;
+        private readonly EmailHelper emailHelper;
 
-        public SQLEmployeeRepository(EmployeeManagementContext db)
+        public SQLEmployeeRepository(EmployeeManagementContext db, EmailHelper emailHelper)
         {
             this.db = db;
+            this.emailHelper = emailHelper;
         }
         public IEnumerable<EmployeeDepartmentModel> GetEmployees()
         {
@@ -33,6 +35,7 @@ namespace TM_EmployeeManagement.Models
                 };
                 db.Employees.Add(newEmployee);
                 db.SaveChanges();
+                //SendEmail(newEmployee.EmailId);
                 return newEmployee;
             }
             return null;
@@ -105,5 +108,34 @@ namespace TM_EmployeeManagement.Models
                             };
             return employees;
         }
+
+        public void SendEmail(string emailId)
+        {
+            var emailModel = new EmailModel(emailId, // To  
+                "Email Test", // Subject  
+                "Sending Email using Asp.Net Core.", // Message  
+                false // IsBodyHTML  
+            );
+            emailHelper.SendEmail(emailModel);
+        }
+
+        public object GetEmployeeStatusById(int? id)
+        {
+            var managerAndEmployees = db.Employees.ToLookup(pair => pair.ManagerId, pair => pair.EmployeeId);
+
+            foreach (var item in managerAndEmployees)
+            {
+                if(id == item.Key)
+                {
+                    if (item.Count() >= 1)
+                    {
+                        return new { Status = "Manager" };
+                    }
+                }
+            }
+
+            return new { Status = "Associate" };
+        }
+        
     }
 }

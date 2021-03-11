@@ -12,5 +12,7 @@ namespace TM_EmployeeManagement.Models
         Employee AddEmployee(EmployeeDepartmentModel employee);
         Employee UpdateEmployee(EmployeeDepartmentModel employee);
         Employee DeleteEmployee(int? id);
+
+        object GetEmployeeStatusById(int? id);
     }
 }

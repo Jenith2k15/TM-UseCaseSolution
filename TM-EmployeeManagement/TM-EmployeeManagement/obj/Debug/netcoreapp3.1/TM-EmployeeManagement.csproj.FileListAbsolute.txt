@@ -251,7 +251,6 @@ F:\Jenith\TM-UseCaseSolution\TM-EmployeeManagement\TM-EmployeeManagement\bin\Deb
 F:\Jenith\TM-UseCaseSolution\TM-EmployeeManagement\TM-EmployeeManagement\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 F:\Jenith\TM-UseCaseSolution\TM-EmployeeManagement\TM-EmployeeManagement\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 F:\Jenith\TM-UseCaseSolution\TM-EmployeeManagement\TM-EmployeeManagement\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-F:\Jenith\TM-UseCaseSolution\TM-EmployeeManagement\TM-EmployeeManagement\obj\Debug\netcoreapp3.1\TM-EmployeeManagement.csprojAssemblyReference.cache
 F:\Jenith\TM-UseCaseSolution\TM-EmployeeManagement\TM-EmployeeManagement\obj\Debug\netcoreapp3.1\TM-EmployeeManagement.AssemblyInfoInputs.cache
 F:\Jenith\TM-UseCaseSolution\TM-EmployeeManagement\TM-EmployeeManagement\obj\Debug\netcoreapp3.1\TM-EmployeeManagement.AssemblyInfo.cs
 F:\Jenith\TM-UseCaseSolution\TM-EmployeeManagement\TM-EmployeeManagement\obj\Debug\netcoreapp3.1\TM-EmployeeManagement.csproj.CoreCompileInputs.cache
@@ -264,3 +263,8 @@ F:\Jenith\TM-UseCaseSolution\TM-EmployeeManagement\TM-EmployeeManagement\obj\Deb
 F:\Jenith\TM-UseCaseSolution\TM-EmployeeManagement\TM-EmployeeManagement\obj\Debug\netcoreapp3.1\TM-EmployeeManagement.dll
 F:\Jenith\TM-UseCaseSolution\TM-EmployeeManagement\TM-EmployeeManagement\obj\Debug\netcoreapp3.1\TM-EmployeeManagement.pdb
 F:\Jenith\TM-UseCaseSolution\TM-EmployeeManagement\TM-EmployeeManagement\obj\Debug\netcoreapp3.1\TM-EmployeeManagement.genruntimeconfig.cache
+F:\Jenith\TM-UseCaseSolution\TM-EmployeeManagement\TM-EmployeeManagement\bin\Debug\netcoreapp3.1\nlog.config
+F:\Jenith\TM-UseCaseSolution\TM-EmployeeManagement\TM-EmployeeManagement\bin\Debug\netcoreapp3.1\NLog.dll
+F:\Jenith\TM-UseCaseSolution\TM-EmployeeManagement\TM-EmployeeManagement\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll
+F:\Jenith\TM-UseCaseSolution\TM-EmployeeManagement\TM-EmployeeManagement\bin\Debug\netcoreapp3.1\NLog.Web.AspNetCore.dll
+F:\Jenith\TM-UseCaseSolution\TM-EmployeeManagement\TM-EmployeeManagement\obj\Debug\netcoreapp3.1\TM-EmployeeManagement.csprojAssemblyReference.cache
